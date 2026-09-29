@@ -4,7 +4,6 @@
 	import '@fontsource-variable/exo-2';
 	import '@fontsource-variable/orbitron';
 
-<<<<<<< HEAD
     import laserlogo from '/src/lib/assets/logo-2.png';
     import Team26 from '../../components/about/committee.svelte';
     import JWPhoto from '/src/lib/assets/committee/joseph-wood.jpg';
@@ -60,63 +59,7 @@
             position: 'Web Developer',
             degree: 'N/A'
         }]
-=======
-	import laserlogo from '/src/lib/assets/logo-2.png';
-	import Team26 from '../../components/about/committee.svelte';
-	import JWPhoto from '/src/lib/assets/committee/joseph-wood.jpg';
-	import KKPhoto from '/src/lib/assets/committee/karl-king.jpg';
 
-	const teamMembers26 = [
-		{
-			image: laserlogo,
-			name: 'Muhammad Khan',
-			position: 'President',
-			degree: 'BEng Aerospace Engineering'
-		},
-		{
-			image: laserlogo,
-			name: 'Juny Suh',
-			position: 'Vice President',
-			degree: 'MEng Aerospace Engineering'
-		},
-		{
-			image: JWPhoto,
-			name: 'Joseph Wood',
-			position: 'Chairperson',
-			degree: 'PhD Electrical Engineering & Electronics'
-		},
-		{
-			image: laserlogo,
-			name: 'Inga Panko',
-			position: 'Lab Safety Officer',
-			degree: 'MEng Aerospace Engineering'
-		},
-		{
-			image: KKPhoto,
-			name: 'Karl King',
-			position: 'Technical Advisor',
-			degree: 'MEng Aerospace Engineering'
-		},
-		{
-			image: laserlogo,
-			name: 'Sirius Zhao',
-			position: 'Treasurer',
-			degree: 'BA Accounting and Finance'
-		},
-		{
-			image: laserlogo,
-			name: 'Vacant',
-			position: 'Outreach Officer',
-			degree: 'N/A'
-		},
-		{
-			image: laserlogo,
-			name: 'Vacant',
-			position: 'Web Developer',
-			degree: 'N/A'
-		}
-	];
->>>>>>> d8e606e2bf82031d1504ba8fb4027b01cf5a0513
 </script>
 
 <div class="body">
