@@ -5,14 +5,14 @@
     import '@fontsource-variable/orbitron';
 
     import laserlogo from '/src/lib/assets/logo-2.png';
-    import Team24 from '../../components/about/committee.svelte';
+    import Team26 from '../../components/about/committee.svelte';
 
-    const teamMembers24 = [
+    const teamMembers26 = [
         {
             image: {laserlogo},
-            name: 'Natasha',
-            position: 'President/CEO',
-            degree: 'Mechanical Engineering'
+            name: 'Muhammad Khan',
+            position: 'President',
+            degree: 'BEng Aerospace Engineering'
         },
         {
             image: {laserlogo},
@@ -275,7 +275,7 @@
     <h1>Our 2024/25 Committee:</h1>
     <p>Members who are selected to run and organise LASER for the 2024/25 academic year.</p>
     <div class="separator"></div>
-    <Team24 members={teamMembers24}/>
+    <Team26 members={teamMembers26}/>
 </div>
 <div class="content-row">
     <div class="container">
