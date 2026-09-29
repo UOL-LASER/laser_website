@@ -7,6 +7,7 @@
     import laserlogo from '/src/lib/assets/logo-2.png';
     import Team26 from '../../components/about/committee.svelte';
     import JWPhoto from '/src/lib/assets/committee/joseph-wood.jpg';
+    import KKPhoto from '/src/lib/assets/committee/karl-king.jpg';
 
     const teamMembers26 = [
         {
@@ -34,7 +35,7 @@
             degree: 'MEng Aerospace Engineering'
         },
         {
-            image: laserlogo,
+            image: KKPhoto,
             name: 'Karl King',
             position: 'Technical Advisor',
             degree: 'MEng Aerospace Engineering'
@@ -273,8 +274,8 @@
     </div>
 </div>
 <div class="content-row">
-    <h1>Our 2024/25 Committee:</h1>
-    <p>Members who are selected to run and organise LASER for the 2024/25 academic year.</p>
+    <h1>Our 2026/27 Committee:</h1>
+    <p>Members who are selected to run and organise LASER for the 2026/27 academic year.</p>
     <div class="separator"></div>
     <Team26 members={teamMembers26}/>
 </div>

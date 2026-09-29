@@ -1,17 +1,20 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-  import week20 from '/assets/newsletter/week20/week20.png';
-  import week19 from '/assets/newsletter/week19/week19.png';
-  import week18 from '/assets/newsletter/week18/week18.png';
-  import week17 from '/assets/newsletter/week17/week17.png';
-  import week16 from '/assets/newsletter/week16/week16.png';
-  import week15 from '/assets/newsletter/week15/week15.png';
-  import week14 from '/assets/newsletter/week14/week14.png';
-  import week13 from '/assets/newsletter/week13/week13.png';
-  import week12 from '/assets/newsletter/week12/week12.png';
-  import week11 from '/assets/newsletter/week11/week11.png';
-  import week10 from '/assets/newsletter/week10/week10.png';
+  import background from '$lib/assets/background-2.jpg';
   import Galleryitem from '../../../components/newsletter/galleryitem.svelte';
+
+  const newsletters = [
+    '/assets/newsletter/week20/week20.png',
+    '/assets/newsletter/week19/week19.png',
+    '/assets/newsletter/week18/week18.png',
+    '/assets/newsletter/week17/week17.png',
+    '/assets/newsletter/week16/week16.png',
+    '/assets/newsletter/week15/week15.png',
+    '/assets/newsletter/week14/week14.png',
+    '/assets/newsletter/week13/week13.png',
+    '/assets/newsletter/week12/week12.png',
+    '/assets/newsletter/week11/week11.png',
+    '/assets/newsletter/week10/week10.png'
+  ];
 </script>
 <style>
         .body {
@@ -21,7 +24,6 @@
     }
     
     .header {
-        background-image: url('/src/lib/assets/background-2.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 35%;
@@ -86,22 +88,14 @@
   </style>
   
   <div class="body">
-    <div class="header">
+    <div class="header" style={`background-image: url(${background})`}>
         <h1>Newsletter</h1>
         <h2>Archive of past released newsletters.</h2>
         </div>
         <div class="gallery-container">
-          <Galleryitem url={week20}/>
-          <Galleryitem url={week19}/>
-          <Galleryitem url={week18}/>
-          <Galleryitem url={week17}/>
-          <Galleryitem url={week16}/>
-          <Galleryitem url={week15}/>
-          <Galleryitem url={week14}/>
-          <Galleryitem url={week13}/>
-          <Galleryitem url={week12}/>
-          <Galleryitem url={week11}/>
-          <Galleryitem url={week10}/>
+          {#each newsletters as newsletter}
+            <Galleryitem url={newsletter}/>
+          {/each}
   </div>
 </div>
 
