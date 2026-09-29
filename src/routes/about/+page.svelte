@@ -68,8 +68,8 @@
 	<div class="header">
 		<h1>About us</h1>
 		<h2>
-			A UOL student-run engineering society based in the Electrical and Electronics Engineering
-			department
+			A University of Liverpool student-run engineering society based in the Electrical Engineering and Electronics
+			department within the School of Engineering. 
 		</h2>
 	</div>
 	<div class="content-row">
@@ -78,10 +78,11 @@
 			<div class="separator"></div>
 			<p>
 				LASER is a student-run Engineering society based in the Electrical and Electronics
-				Engineering department. We run multiple projects that span a broad range of fields and
+				Engineering department, which is within the School of Engineering at the University of Liverpool. 
+				We run multiple projects that span a broad range of fields and
 				welcome new people to join at all times. All backgrounds and courses are welcome - even
 				people who aren't interested in the technical side. Some of our current initiatives include
-				an entry into the UKSEDS rocketry competition, microcontroller/personal project workshops,
+				an entry into the UKSEDS rocketry competition, workshops for learning new technical skills, personal projects,
 				visits to engineering companies, and talks from experts in the industry. We want to create a
 				friendly and social atmosphere where students can not only develop their engineering and
 				management skills, but also gain important industrial skills that students don’t tend to
@@ -103,12 +104,9 @@
 			<p>
 				We would like to acknowledge the generous financial support we have recieved, which has been
 				instrumental in enabling us to run various projects and the purchase of equipment for our
-				lab space. This has been made possible through the funding provided by the <strong
-					>Moruzzi Fund</strong
-				>
-				and the
-				<strong>University of Liverpool's Electrical Engineering and Electronics department</strong
-				>.
+				lab space. This has been made possible through the funding provided by the <strong >Moruzzi Fund</strong>, the
+				<strong>Electrical Engineering and Electronics department</strong>, and the <strong>Alumni and Friends Fund</strong>. 
+				We are grateful for their support and look forward to continuing our work with them in the future.
 			</p>
 		</div>
 	</div>
