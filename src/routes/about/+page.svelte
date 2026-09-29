@@ -8,7 +8,7 @@
     import Team26 from '../../components/about/committee.svelte';
     import JWPhoto from '/src/lib/assets/committee/joseph-wood.jpg';
     import KKPhoto from '/src/lib/assets/committee/karl-king.jpg';
-    import MKPhoto from '/src/lib/assets/committee/muhammad-khan.jpg';
+    import MKPhoto from '/src/lib/assets/committee/muhammad-khan.png';
 
     const teamMembers26 = [
         {
