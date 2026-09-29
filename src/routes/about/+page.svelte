@@ -9,6 +9,7 @@
     import JWPhoto from '/src/lib/assets/committee/joseph-wood.jpg';
     import KKPhoto from '/src/lib/assets/committee/karl-king.jpg';
     import MKPhoto from '/src/lib/assets/committee/muhammad-khan.png';
+	import JSPhoto from '/src/lib/assets/committee/juny-suh.jpg';
 
     const teamMembers26 = [
         {
@@ -18,7 +19,7 @@
             degree: 'BEng Aerospace Engineering'
         },
         {
-            image: laserlogo,
+            image: JSPhoto,
             name: 'Juny Suh',
             position: 'Vice President',
             degree: 'MEng Aerospace Engineering'

@@ -6,18 +6,30 @@
 	import '@fontsource-variable/orbitron';
 
 	import Dropdown from './resources/dropdown.svelte';
+
+	let menuOpen = false;
+
+	function toggleMenu() {
+		menuOpen = !menuOpen;
+	}
+
+	function closeMenu() {
+		menuOpen = false;
+	}
 </script>
 
 <div class="navbar">
 	<div class="navbar-brand">
-		<a href="/"
+		<a href="/" on:click={closeMenu}
 			><div class="logo-container">
 				<img src={logo} alt="LASER Logo" />
 				<span class="logo-text">LASER</span>
 			</div></a
 		>
 	</div>
-	<div class="navbar-links">
+
+	<!-- Desktop navbar -->
+	<div class="navbar-links desktop">
 		<ul>
 			<li>
 				<Dropdown />
@@ -30,6 +42,39 @@
 			</li>
 		</ul>
 	</div>
+
+	<!-- Mobile hamburger button -->
+	<button class="hamburger" on:click={toggleMenu} aria-label="Toggle menu">
+		<span class="hamburger-line"></span>
+		<span class="hamburger-line"></span>
+		<span class="hamburger-line"></span>
+	</button>
+
+	<!-- Mobile dropdown menu -->
+	{#if menuOpen}
+		<div class="mobile-menu">
+			<nav>
+				<ul>
+					<li>
+						<a href="/resources/hear" on:click={closeMenu}>HEAR Accreditation</a>
+					</li>
+					<li>
+						<a href="/resources/newsletter" on:click={closeMenu}>Newsletter</a>
+					</li>
+					<li>
+						<a href="/resources/tos" on:click={closeMenu}>LASER TOS and SOP</a>
+					</li>
+					<div class="divider"></div>
+					<li>
+						<a href="/projects" on:click={closeMenu}>Projects</a>
+					</li>
+					<li>
+						<a href="/about" on:click={closeMenu}>About</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -110,28 +155,117 @@
 		color: #58a6ff;
 	}
 
+	/* Hamburger button - hidden on desktop */
+	.hamburger {
+		display: none;
+		flex-direction: column;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.5rem;
+		margin-right: 1rem;
+	}
+
+	.hamburger-line {
+		width: 25px;
+		height: 3px;
+		background-color: white;
+		margin: 5px 0;
+		transition: all 0.3s ease;
+		display: block;
+	}
+
+	/* Mobile menu - hidden by default */
+	.mobile-menu {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: #111111;
+		border-bottom: 1px solid white;
+		padding: 1rem 0;
+	}
+
+	.mobile-menu nav ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.mobile-menu nav ul li {
+		padding: 0;
+	}
+
+	.mobile-menu nav ul li a {
+		display: block;
+		color: white;
+		text-decoration: none;
+		padding: 1rem 2rem;
+		font-family: 'Orbitron Variable', sans-serif;
+		font-size: 16px;
+		transition: background-color 0.3s ease, color 0.3s ease;
+		border: none;
+	}
+
+	.mobile-menu nav ul li a:hover {
+		background-color: #222222;
+		color: #58a6ff;
+	}
+
+	.divider {
+		height: 1px;
+		background-color: #444444;
+		margin: 0.5rem 0;
+	}
+
+	/* Desktop view - show navbar links */
+	@media (min-width: 769px) {
+		.navbar-links.desktop {
+			display: flex;
+		}
+	}
+
+	/* Mobile view */
 	@media (max-width: 768px) {
 		.navbar {
-			flex-direction: column;
-			text-align: center;
+			padding: 1vh 0.5rem;
 		}
 
-		.navbar-links {
-			margin-top: 10px;
-			justify-content: center;
+		.navbar-brand {
+			flex: 0 0 auto;
 		}
 
-		.navbar-links li {
-			margin: 10px 0;
+		.logo-container {
+			margin-left: 1rem;
 		}
 
-		.navbar-links li:not(:last-child)::after {
-			content: '';
-			border-right: 1px solid white;
-			height: 100%;
-			margin-left: 4vw;
-			margin-right: 4vw;
-			color: white;
+		.logo-container img {
+			width: 5vh;
+		}
+
+		.logo-text {
+			font-size: 3vh;
+			margin-left: 5px;
+		}
+
+		/* Hide desktop navbar links on mobile */
+		.navbar-links.desktop {
+			display: none;
+		}
+
+		/* Show hamburger button on mobile */
+		.hamburger {
+			display: flex;
+			margin-left: auto;
+			margin-right: 1rem;
+		}
+
+		/* Show mobile menu when open */
+		.mobile-menu {
+			display: block;
 		}
 	}
 </style>
