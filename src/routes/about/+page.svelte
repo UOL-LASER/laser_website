@@ -10,6 +10,7 @@
     import KKPhoto from '/src/lib/assets/committee/karl-king.jpg';
     import MKPhoto from '/src/lib/assets/committee/muhammad-khan.png';
 	import JSPhoto from '/src/lib/assets/committee/juny-suh.jpg';
+	import IPPhoto from '/src/lib/assets/committee/inga-panko.jpg';
 
     const teamMembers26 = [
         {
@@ -31,7 +32,7 @@
             degree: 'PhD Electrical Engineering & Electronics'
         },
         {
-            image: laserlogo,
+            image: IPPhoto,
             name: 'Inga Panko',
             position: 'Lab Safety Officer',
             degree: 'MEng Aerospace Engineering'
