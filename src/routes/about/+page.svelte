@@ -41,8 +41,20 @@
         },
         {
             image: laserlogo,
+            name: 'Sirius Zhao',
+            position: 'Treasurer',
+            degree: 'BA Accounting and Finance'
+        },
+        {
+            image: laserlogo,
             name: 'Vacant',
             position: 'Outreach Officer',
+            degree: 'N/A'
+        },
+        {
+            image: laserlogo,
+            name: 'Vacant',
+            position: 'Web Developer',
             degree: 'N/A'
         }]
 </script>
