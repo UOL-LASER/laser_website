@@ -16,45 +16,33 @@
         },
         {
             image: {laserlogo},
-            name: 'Alicia',
-            position: 'Vice President/COO',
-            degree: 'Aerospace Engineering'
+            name: 'Juny Suh',
+            position: 'Vice President',
+            degree: 'MEng Aerospace Engineering'
         },
         {
             image: {laserlogo},
-            name: 'Nouran',
-            position: 'Treasurer/CFO',
-            degree: 'Electrical & Electronic Engineering'
+            name: 'Joseph Wood',
+            position: 'Chairperson',
+            degree: 'PhD Electrical Engineering & Electronics'
         },
         {
             image: {laserlogo},
-            name: 'Aurora',
-            position: 'Lab Safety Officer/Manager',
-            degree: 'Mechatronics & Robotic Systems'
+            name: 'Inga Panko',
+            position: 'Lab Safety Officer',
+            degree: 'MEng Aerospace Engineering'
         },
         {
             image: {laserlogo},
-            name: 'Karl',
-            position: 'Technical Advisor/CTO',
-            degree: 'Aerospace Engineering'
+            name: 'Karl King',
+            position: 'Technical Advisor',
+            degree: 'MEng Aerospace Engineering'
         },
         {
             image: {laserlogo},
             name: 'Vacant',
             position: 'Outreach Officer',
             degree: 'N/A'
-        },
-        {
-            image: {laserlogo},
-            name: 'Kitt',
-            position: 'Software/IT Officer',
-            degree: 'Computer Science'
-        },
-        {
-            image: {laserlogo},
-            name: 'Francis',
-            position: 'Secretary',
-            degree: 'Computer Science'
         }]
 </script>
 
