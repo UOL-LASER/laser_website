@@ -1,7 +1,6 @@
 <script lang="ts">
-  import laserlogo from '/src/lib/assets/logo-2.png';
-
     interface Member {
+      image: string;
       name: string;
       position: string;
       degree: string;
@@ -32,9 +31,13 @@
     }
   
     .card img {
-      border-radius: 10px;
-      width: 25%;
-      height: auto;
+      display: block;
+      width: 180px;
+      height: 180px;
+      margin: 0 auto;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
     }
   
     .card h3,
@@ -67,25 +70,19 @@
       .card {
         flex: 0 0 80%;
       }
-      .card img {
-      width: 50%;
-    }
     }
   
     @media (max-width: 480px) {
       .card {
         flex: 0 0 100%;
       }
-      .card img {
-      width: 25%;
-    }
     }
   </style>
   
   <div class="team-container">
     {#each members as member}
       <div class="card">
-        <img src={laserlogo}>
+        <img src={member.image} alt={`${member.name} profile`}>
         <h3>{member.name}</h3>
         <p>{member.position}</p>
         <p2>{member.degree}</p2>

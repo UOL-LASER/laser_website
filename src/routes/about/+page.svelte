@@ -6,40 +6,41 @@
 
     import laserlogo from '/src/lib/assets/logo-2.png';
     import Team26 from '../../components/about/committee.svelte';
+    import JWPhoto from '/src/lib/assets/committee/joseph-wood.jpg';
 
     const teamMembers26 = [
         {
-            image: {laserlogo},
+            image: laserlogo,
             name: 'Muhammad Khan',
             position: 'President',
             degree: 'BEng Aerospace Engineering'
         },
         {
-            image: {laserlogo},
+            image: laserlogo,
             name: 'Juny Suh',
             position: 'Vice President',
             degree: 'MEng Aerospace Engineering'
         },
         {
-            image: {laserlogo},
+            image: JWPhoto,
             name: 'Joseph Wood',
             position: 'Chairperson',
             degree: 'PhD Electrical Engineering & Electronics'
         },
         {
-            image: {laserlogo},
+            image: laserlogo,
             name: 'Inga Panko',
             position: 'Lab Safety Officer',
             degree: 'MEng Aerospace Engineering'
         },
         {
-            image: {laserlogo},
+            image: laserlogo,
             name: 'Karl King',
             position: 'Technical Advisor',
             degree: 'MEng Aerospace Engineering'
         },
         {
-            image: {laserlogo},
+            image: laserlogo,
             name: 'Vacant',
             position: 'Outreach Officer',
             degree: 'N/A'
