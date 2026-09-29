@@ -8,10 +8,11 @@
     import Team26 from '../../components/about/committee.svelte';
     import JWPhoto from '/src/lib/assets/committee/joseph-wood.jpg';
     import KKPhoto from '/src/lib/assets/committee/karl-king.jpg';
+    import MKPhoto from '/src/lib/assets/committee/muhammad-khan.jpg';
 
     const teamMembers26 = [
         {
-            image: laserlogo,
+            image: MKPhoto,
             name: 'Muhammad Khan',
             position: 'President',
             degree: 'BEng Aerospace Engineering'
