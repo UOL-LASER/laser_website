@@ -100,12 +100,16 @@
 	}
 
 	.header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		background-image: url('/src/lib/assets/background-2.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: 50% 35%;
 		text-align: center;
-		padding: 300px 40px 40px;
+		padding: 40px;
 		color: white;
 		height: 600px;
 	}
