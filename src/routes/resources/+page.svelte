@@ -120,6 +120,10 @@
 	}
 
 	.header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		background-image: url('/src/lib/assets/background-2.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
