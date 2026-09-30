@@ -105,9 +105,9 @@
 		background-repeat: no-repeat;
 		background-position: 50% 35%;
 		text-align: center;
-		padding: 40px;
+		padding: 300px 40px 40px;
 		color: white;
-		height: 475px;
+		height: 600px;
 	}
 
 	.header h1 {
@@ -206,6 +206,7 @@
 
 	@media (max-width: 768px) {
 		.header {
+			padding: 70px 10px 10px;
 			height: 620px;
 		}
 
