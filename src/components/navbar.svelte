@@ -80,13 +80,6 @@
 					<li>
 						<a href="/contact" on:click={closeMenu}>Contact Us</a>
 					</li>
-					<div class="divider"></div>
-					<li style="font-size: 14px; color: #888;">
-						<a href="/resources/hear" on:click={closeMenu}>HEAR Accreditation</a>
-					</li>
-					<li style="font-size: 14px; color: #888;">
-						<a href="/resources/newsletter" on:click={closeMenu}>Newsletter</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
@@ -133,7 +126,7 @@
 		font-family: 'Orbitron Variable', sans-serif;
 		font-size: 4vh;
 		color: white;
-		margin-left: 5px;
+		margin-left: 12px;
 	}
 
 	.navbar-links {
