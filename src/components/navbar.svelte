@@ -42,7 +42,7 @@
 				<a class="nav-link" href="/projects" rel="prefetch">Projects</a>
 			</li>
 			<li>
-				<a class="nav-link" href="/resources/tos" rel="prefetch">Resources</a>
+				<a class="nav-link" href="/resources" rel="prefetch">Resources</a>
 			</li>
 			<li>
 				<a class="nav-link" href="/contact" rel="prefetch">Contact Us</a>
@@ -75,17 +75,10 @@
 						<a href="/projects" on:click={closeMenu}>Projects</a>
 					</li>
 					<li>
-						<a href="/resources/tos" on:click={closeMenu}>Resources</a>
+						<a href="/resources" on:click={closeMenu}>Resources</a>
 					</li>
 					<li>
 						<a href="/contact" on:click={closeMenu}>Contact Us</a>
-					</li>
-					<div class="divider"></div>
-					<li style="font-size: 14px; color: #888;">
-						<a href="/resources/hear" on:click={closeMenu}>HEAR Accreditation</a>
-					</li>
-					<li style="font-size: 14px; color: #888;">
-						<a href="/resources/newsletter" on:click={closeMenu}>Newsletter</a>
 					</li>
 				</ul>
 			</nav>
@@ -229,12 +222,6 @@
 	.mobile-menu nav ul li a:hover {
 		background-color: #222222;
 		color: #58a6ff;
-	}
-
-	.divider {
-		height: 1px;
-		background-color: #444444;
-		margin: 0.5rem 0;
 	}
 
 	/* Desktop view - show navbar links */
