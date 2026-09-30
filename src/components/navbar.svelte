@@ -88,7 +88,7 @@
 
 <style>
 	.navbar {
-		background: #111111;
+		background: rgba(17, 17, 17, 0.92);
 		display: flex;
 		align-items: center;
 		position: fixed;
@@ -191,7 +191,7 @@
 		top: 100%;
 		left: 0;
 		width: 100%;
-		background-color: #111111;
+		background-color: rgba(17, 17, 17, 0.92);
 		border-bottom: 1px solid white;
 		padding: 1rem 0;
 	}
