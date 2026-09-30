@@ -224,12 +224,6 @@
 		color: #58a6ff;
 	}
 
-	.divider {
-		height: 1px;
-		background-color: #444444;
-		margin: 0.5rem 0;
-	}
-
 	/* Desktop view - show navbar links */
 	@media (min-width: 769px) {
 		.navbar-links.desktop {
