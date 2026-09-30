@@ -104,14 +104,14 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background-image: url('/src/lib/assets/background-2.jpg');
+		background-image: url('/src/lib/assets/background.png');
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: 50% 35%;
+		background-position: 50% 60%;
 		text-align: center;
 		padding: 40px;
 		color: white;
-		height: 600px;
+		height: 800px;
 	}
 
 	.header h1 {
@@ -142,8 +142,8 @@
 		font-size: 2vh;
 		font-family: 'Exo 2 Variable';
 		margin: 0 10px;
-		background-color: #111111;
-		color: #ffffff;
+		background-color: #ffffff;
+		color: #000000;
 		border: none;
 		border-radius: 5px;
 		transition: all 0.3s ease;
@@ -151,7 +151,6 @@
 	}
 
 	.button:hover {
-		filter: invert(1);
 		transform: scale(1.05);
 	}
 
