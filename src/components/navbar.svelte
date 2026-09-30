@@ -42,7 +42,7 @@
 				<a class="nav-link" href="/projects" rel="prefetch">Projects</a>
 			</li>
 			<li>
-				<a class="nav-link" href="/resources/tos" rel="prefetch">Resources</a>
+				<a class="nav-link" href="/resources" rel="prefetch">Resources</a>
 			</li>
 			<li>
 				<a class="nav-link" href="/contact" rel="prefetch">Contact Us</a>
@@ -75,7 +75,7 @@
 						<a href="/projects" on:click={closeMenu}>Projects</a>
 					</li>
 					<li>
-						<a href="/resources/tos" on:click={closeMenu}>Resources</a>
+						<a href="/resources" on:click={closeMenu}>Resources</a>
 					</li>
 					<li>
 						<a href="/contact" on:click={closeMenu}>Contact Us</a>
