@@ -10,10 +10,7 @@
 
 	import Getinvolved from '../components/index/getinvolved.svelte';
 	import Faq from '../components/index/faq.svelte';
-	import Attribution from '../components/footer/attribution.svelte';
 	import Galleryitem from '../components/newsletter/galleryitem.svelte';
-
-	import merch from '../lib/assets/merch.png';
 
 	function scrollToProjects() {
 		const projectsHeader = document.getElementById('projects-header');
@@ -197,54 +194,6 @@
 		margin: 20px auto;
 	}
 
-	.item-rowcontainer {
-		display: flex;
-		justify-content: center;
-		width: 40%;
-		margin: 10px auto;
-	}
-
-	.item-container {
-		flex: 0 0 60%;
-		text-align: center;
-		background-color: #f1f1f1;
-		border-radius: 10px;
-		padding: 20px;
-		margin: 10px auto;
-		transition: all 0.3s ease;
-		cursor: pointer;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	}
-
-	.item-container:hover {
-		transform: scale(1.05);
-		filter: invert(1);
-	}
-
-	.item-container img {
-		width: 18vh;
-		height: auto;
-	}
-
-	.item-container p {
-		font-family: 'Orbitron Variable', sans-serif;
-		font-size: 2vh;
-		text-align: center;
-		color: #000000;
-		line-height: 1.6;
-		padding: 20px;
-		font-weight: bold;
-		margin: 10px auto;
-	}
-
-	.vseparator::after {
-		content: '';
-		height: 100%;
-		margin-left: 2vw;
-		margin-right: 2vw;
-		color: white;
-	}
-
 	.gallery-container {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -282,18 +231,6 @@
 			font-size: 2vh;
 			font-family: 'Exo 2 Variable';
 			margin: 0 auto;
-		}
-
-		.item-rowcontainer {
-			overflow-x: auto;
-			width: auto;
-			display: inline;
-			padding: 20px;
-		}
-
-		.item-container {
-			flex: 0 0 auto;
-			min-width: 30%;
 		}
 
 		.gallery-container {

@@ -7,31 +7,20 @@
 	import instagram from '$lib/assets/icons/instagram.svg';
 	import email from '$lib/assets/icons/email.svg';
 	import linkedin from '$lib/assets/icons/linkedin.svg';
-	import whatsapp from '$lib/assets/icons/whatsapp.svg';
 	import discord from '$lib/assets/icons/discord.svg';
-	import canvas from '$lib/assets/icons/canvas.svg';
 
-	import Attribution from './footer/attribution.svelte';
 	import Privacypolicy from './footer/privacypolicy.svelte';
 
-	let showAttribution = false;
 	let showPrivacyPolicy = false;
 
 	onMount(() => {
-		showAttribution = false;
 		showPrivacyPolicy = false;
 	});
 
-	function openAttribution() {
-		showAttribution = true;
-	}
 	function openPrivacyPolicy() {
 		showPrivacyPolicy = true;
 	}
 
-	function handleAttributionClose() {
-		showAttribution = false;
-	}
 	function handlePrivacyPolicyClose() {
 		showPrivacyPolicy = false;
 	}
@@ -46,21 +35,17 @@
 			><img src={linkedin} alt="LinkedIn" /></a
 		>
 		<a href="mailto:laser@liverpool.ac.uk"><img src={email} alt="Email" /></a>
-		<a href="https://chat.whatsapp.com/Hs5zybaWLcEGTOO6DJMgoO"
-			><img src={whatsapp} alt="WhatsApp" /></a
-		>
+		
 		<a href="https://discord.gg/8RZZe7E6FS"><img src={discord} alt="Discord" /></a>
-		<a href="https://liverpool.instructure.com/courses/55224"><img src={canvas} alt="Canvas" /></a>
 	</div>
 	<div class="footer-links">
-		<a style="cursor: pointer;" href="https://www.linkedin.com/in/phamilton360">Attribution</a>
+		<a href="https://github.com/UOL-LASER">GitHub</a>
 		<a style="cursor: pointer;" on:click={openPrivacyPolicy}>LASER TOS</a>
 	</div>
 	<p>&copy; LASER {currentYear}</p>
 	<p2>Numqam Solum Volare</p2>
 </div>
 
-<Attribution show={showAttribution} on:close={handleAttributionClose}></Attribution>
 <Privacypolicy show={showPrivacyPolicy} on:close={handlePrivacyPolicyClose}></Privacypolicy>
 
 <style>

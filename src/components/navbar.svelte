@@ -5,8 +5,6 @@
 	import '@fontsource-variable/exo-2';
 	import '@fontsource-variable/orbitron';
 
-	import Dropdown from './resources/dropdown.svelte';
-
 	let menuOpen = false;
 
 	function toggleMenu() {
@@ -32,13 +30,22 @@
 	<div class="navbar-links desktop">
 		<ul>
 			<li>
-				<Dropdown />
+				<a class="nav-link" href="/" rel="prefetch">Home</a>
+			</li>
+			<li>
+				<a class="nav-link" href="/about" rel="prefetch">About Us</a>
+			</li>
+			<li>
+				<a class="nav-link" href="/competitions" rel="prefetch">Competitions</a>
 			</li>
 			<li>
 				<a class="nav-link" href="/projects" rel="prefetch">Projects</a>
 			</li>
 			<li>
-				<a class="nav-link" href="/about" rel="prefetch">About</a>
+				<a class="nav-link" href="/resources/tos" rel="prefetch">Resources</a>
+			</li>
+			<li>
+				<a class="nav-link" href="/contact" rel="prefetch">Contact Us</a>
 			</li>
 		</ul>
 	</div>
@@ -56,20 +63,29 @@
 			<nav>
 				<ul>
 					<li>
-						<a href="/resources/hear" on:click={closeMenu}>HEAR Accreditation</a>
+						<a href="/" on:click={closeMenu}>Home</a>
 					</li>
 					<li>
-						<a href="/resources/newsletter" on:click={closeMenu}>Newsletter</a>
+						<a href="/about" on:click={closeMenu}>About Us</a>
 					</li>
 					<li>
-						<a href="/resources/tos" on:click={closeMenu}>LASER TOS and SOP</a>
+						<a href="/competitions" on:click={closeMenu}>Competitions</a>
 					</li>
-					<div class="divider"></div>
 					<li>
 						<a href="/projects" on:click={closeMenu}>Projects</a>
 					</li>
 					<li>
-						<a href="/about" on:click={closeMenu}>About</a>
+						<a href="/resources/tos" on:click={closeMenu}>Resources</a>
+					</li>
+					<li>
+						<a href="/contact" on:click={closeMenu}>Contact Us</a>
+					</li>
+					<div class="divider"></div>
+					<li style="font-size: 14px; color: #888;">
+						<a href="/resources/hear" on:click={closeMenu}>HEAR Accreditation</a>
+					</li>
+					<li style="font-size: 14px; color: #888;">
+						<a href="/resources/newsletter" on:click={closeMenu}>Newsletter</a>
 					</li>
 				</ul>
 			</nav>

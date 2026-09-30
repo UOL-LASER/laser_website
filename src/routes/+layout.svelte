@@ -6,10 +6,7 @@
 
 	import { onMount } from 'svelte';
 	import Navbar from '../components/navbar.svelte';
-	import TempNavBar from '../components/tempnavbar.svelte';
 	import Footer from '../components/footer.svelte';
-
-	import Tempnavbar from '../components/tempnavbar.svelte';
 
 	function setViewportMetaTag() {
 		const meta = document.createElement('meta');
