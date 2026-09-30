@@ -5,52 +5,112 @@
 
 	import laserTOS from '$lib/assets/pdf/TOS/LASER Terms of Service.pdf';
 	import laserComplaintsSOP from '$lib/assets/pdf/TOS/LASER Reporting and Complaint Handling Procedure.pdf';
+	import orderForm from '$lib/assets/ORDER FORM BLANK.docx';
 
-	function scrollToProjects() {
-		const projectsHeader = document.getElementById('projects-header');
-		projectsHeader?.scrollIntoView({ behavior: 'smooth' });
+	/** @type {{ title: string; source: string; downloadOnly?: boolean } | null} */
+	let openDocument = null;
+
+	function closeDocument() {
+		openDocument = null;
 	}
-	function scrollToGetInvolved() {
-		const getinvolvedheader = document.getElementById('getinvolved-header');
-		getinvolvedheader?.scrollIntoView({ behavior: 'smooth' });
+
+	/** @param {KeyboardEvent} event */
+	function handleKeydown(event) {
+		if (event.key === 'Escape') {
+			closeDocument();
+		}
+	}
+
+	/** @param {MouseEvent} event */
+	function handleBackdropClick(event) {
+		if (event.target === event.currentTarget) {
+			closeDocument();
+		}
 	}
 </script>
 
 <div class="body">
 	<div class="header">
-		<h1>LASER Terms of service and complaints standard operating procedure</h1>
+		<h1>LASER Resources</h1>
 		<h2>
-			The following documents set out procedure and standards that are adhered to by the group.
+			Find useful documents, guidance, and information for getting involved with LASER.
 		</h2>
 	</div>
 	<div class="content-row">
-		<h1>LASER Terms of service</h1>
+		<h1>Order Form</h1>
 		<p style="text-align: center;">
-			Through participating in LASER, you inherently agree to abide and meet standards set out by
-			the following document:
+			Download the order form to request LASER merchandise or equipment.
 		</p>
 		<div class="separator"></div>
-		<div class="pdfcontainer">
-			<iframe src={laserTOS} />
-		</div>
+		<button
+			class="resource-link"
+			on:click={() => (openDocument = { title: 'Order Form', source: orderForm, downloadOnly: true })}
+		>
+			<span>Download Order Form</span>
+			<span aria-hidden="true">↓</span>
+		</button>
 	</div>
 	<div class="content-row">
-		<h1>LASER Complaints handling procedure</h1>
+		<h1>Terms of Service</h1>
 		<p style="text-align: center;">
-			The following document explains the disciplinary procedure that is adhered to when dealing
-			with issues within the group:
+			This document outlines the standards and expectations for everyone participating in LASER.
 		</p>
 		<div class="separator"></div>
-		<div class="pdfcontainer">
-			<iframe src={laserComplaintsSOP} />
-		</div>
+		<button class="resource-link" on:click={() => (openDocument = { title: 'Terms of Service', source: laserTOS })}>
+			<span>Open Terms of Service</span>
+			<span aria-hidden="true">↗</span>
+		</button>
+	</div>
+	<div class="content-row">
+		<h1>Complaints Handling Procedure</h1>
+		<p style="text-align: center;">
+			This document explains how concerns and complaints are handled within the group:
+		</p>
+		<div class="separator"></div>
+		<button
+			class="resource-link"
+			on:click={() =>
+				(openDocument = {
+					title: 'Complaints Handling Procedure',
+					source: laserComplaintsSOP
+				})}
+		>
+			<span>Open Complaints Handling Procedure</span>
+			<span aria-hidden="true">↗</span>
+		</button>
 		<div class="separator"></div>
 		<p>
-			If you have any questions regarding either LASER's TOS or complaints SOP, do not hesitate to
-			get in touch at laser@liverpool.ac.uk.
+			If you have any questions about these resources or need further information, get in touch at
+			laser@liverpool.ac.uk.
 		</p>
 	</div>
 </div>
+
+<svelte:window on:keydown={handleKeydown} />
+
+{#if openDocument}
+	<div class="modal-backdrop" role="presentation" on:click={handleBackdropClick}>
+		<div
+			class="modal"
+			role="dialog"
+			aria-modal="true"
+			aria-label={openDocument.title}
+		>
+			<div class="modal-header">
+				<h2>{openDocument.title}</h2>
+				<button class="close-button" aria-label="Close document" on:click={closeDocument}>×</button>
+			</div>
+			{#if openDocument.downloadOnly}
+				<div class="download-panel">
+					<p>This Word document cannot be previewed in the browser.</p>
+					<a class="download-link" href={openDocument.source} download>Download Order Form</a>
+				</div>
+			{:else}
+				<iframe title={openDocument.title} src={openDocument.source}></iframe>
+			{/if}
+		</div>
+	</div>
+{/if}
 
 <style>
 	.body {
@@ -88,31 +148,6 @@
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	}
 
-	.buttons {
-		display: flex;
-		justify-content: center;
-		padding: 20px;
-		margin: 20px auto;
-	}
-
-	.button {
-		padding: 10px 20px;
-		font-size: 2vh;
-		font-family: 'Exo 2 Variable';
-		margin: 0 10px;
-		background-color: #111111;
-		color: #ffffff;
-		border: none;
-		border-radius: 5px;
-		transition: all 0.3s ease;
-		cursor: pointer;
-	}
-
-	.button:hover {
-		filter: invert(1);
-		transform: scale(1.05);
-	}
-
 	.content-row {
 		padding: 20px;
 		background-color: #ffffff;
@@ -121,21 +156,122 @@
 		margin: 10px auto;
 	}
 
-	.pdfcontainer {
-		background-color: #f1f1f1;
-		border-radius: 10px;
-		padding: 20px;
-		margin: 10px auto;
-		display: flexbox;
-		justify-content: center;
+	.resource-link {
+		display: flex;
 		align-items: center;
-		height: 110vh;
+		justify-content: space-between;
+		width: min(90%, 760px);
+		padding: 18px 22px;
+		margin: 10px auto 25px;
+		background-color: #111111;
+		border: 1px solid #111111;
+		border-radius: 5px;
+		color: #ffffff;
+		font: inherit;
+		font-family: 'Exo 2 Variable';
+		font-size: 2.3vh;
+		cursor: pointer;
+		transition: background-color 0.2s ease, color 0.2s ease;
 	}
 
-	.pdfcontainer iframe {
-		border: none;
+	.resource-link:hover,
+	.resource-link:focus-visible {
+		background-color: #ffffff;
+		color: #111111;
+		outline: 2px solid #58a6ff;
+		outline-offset: 3px;
+	}
+
+	.modal-backdrop {
+		position: fixed;
+		inset: 0;
+		z-index: 1000;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 3vh 3vw;
+		background: rgba(0, 0, 0, 0.8);
+	}
+
+	.modal {
+		display: flex;
+		flex-direction: column;
+		width: min(1100px, 100%);
+		height: min(90vh, 900px);
+		background: #ffffff;
+		border-radius: 6px;
+		overflow: hidden;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+	}
+
+	.modal-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 12px 18px;
+		background: #111111;
+		color: #ffffff;
+	}
+
+	.modal-header h2 {
+		margin: 0;
+		font-family: 'Orbitron Variable', sans-serif;
+		font-size: 1.1rem;
+	}
+
+	.close-button {
+		padding: 0 8px;
+		background: transparent;
+		border: 0;
+		color: #ffffff;
+		font-size: 2rem;
+		line-height: 1;
+		cursor: pointer;
+	}
+
+	.close-button:focus-visible {
+		outline: 2px solid #58a6ff;
+	}
+
+	.download-panel {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 24px;
+		padding: 32px;
+		font-family: 'Exo 2 Variable';
+		font-size: 1.2rem;
+		text-align: center;
+	}
+
+	.download-panel p {
+		margin: 0;
+	}
+
+	.download-link {
+		padding: 14px 22px;
+		background-color: #111111;
+		border: 1px solid #111111;
+		border-radius: 5px;
+		color: #ffffff;
+		font-family: 'Exo 2 Variable';
+		text-decoration: none;
+	}
+
+	.download-link:hover,
+	.download-link:focus-visible {
+		background-color: #ffffff;
+		color: #111111;
+		outline: 2px solid #58a6ff;
+		outline-offset: 3px;
+	}
+
+	.modal iframe {
 		width: 100%;
-		height: 100vh;
+		flex: 1;
+		border: none;
 	}
 
 	.content-row h1 {
@@ -181,25 +317,14 @@
 			margin: 5px auto;
 		}
 
-		.buttons {
-			padding: 10px;
-			margin: 5px auto;
+		.modal-backdrop {
+			padding: 0;
 		}
 
-		.button {
-			padding: 10px 20px;
-			font-size: 2vh;
-			font-family: 'Exo 2 Variable';
-			margin: 0 auto;
-		}
-
-		.pdfcontainer {
-			height: 60vh;
-		}
-
-		.pdfcontainer iframe {
+		.modal {
 			width: 100%;
-			height: 50vh;
+			height: 100%;
+			border-radius: 0;
 		}
 	}
 </style>
