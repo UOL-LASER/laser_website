@@ -51,7 +51,7 @@
 		max-width: 100%;
 		margin: 0;
 		padding: 0;
-		padding: 6vh 0px 0px 0px;
+		padding: 0;
 	}
 	main {
 		flex: 1;
@@ -62,7 +62,7 @@
 	}
 	@media (max-width: 768px) {
 		.page {
-			padding: 70px 0px 0px 0px;
+			padding: 0;
 		}
 	}
 </style>
