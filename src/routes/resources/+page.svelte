@@ -30,6 +30,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Resources | LASER</title>
+</svelte:head>
+
 <div class="body">
 	<div class="header">
 		<h1>LASER Resources</h1>

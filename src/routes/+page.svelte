@@ -22,6 +22,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Home | LASER</title>
+</svelte:head>
+
 <div class="body">
 	<div class="header">
 		<h1>Liverpool Association For Space Engineering And Research</h1>
