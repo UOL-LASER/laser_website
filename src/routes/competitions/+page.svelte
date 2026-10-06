@@ -1,6 +1,9 @@
 <script lang="ts">
 	import unityRiseLogo from '$lib/assets/UR_Logo_Eye.png';
 	import roverImage from '$lib/assets/rover.png';
+	import gallery5 from '$lib/assets/gallery5.jpg';
+	import gallery6 from '$lib/assets/gallery6.jpg';
+	import gallery9 from '$lib/assets/gallery9.jpg';
 	import '@fontsource-variable/exo-2';
 	import '@fontsource-variable/orbitron';
 </script>
@@ -33,9 +36,9 @@
 					</div>
 				</div>
 				<div class="photo-gallery" aria-label="Rocketry photo gallery">
-					<div class="photo-space">Rocketry photo 1</div>
-					<div class="photo-space">Rocketry photo 2</div>
-					<div class="photo-space">Rocketry photo 3</div>
+					<div class="photo-space"><img src={gallery5} alt="Unity Rise rocket project" /></div>
+					<div class="photo-space"><img src={gallery6} alt="Unity Rise rocket project" /></div>
+					<div class="photo-space"><img src={gallery9} alt="Unity Rise rocket project" /></div>
 				</div>
 			</div>
 		</section>
@@ -66,7 +69,7 @@
 	.section-number { margin: 0; color: #58a6ff; font-family: 'Orbitron Variable', sans-serif; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; }
 	.page-header h1 { margin: 18px 0 12px; font-family: 'Orbitron Variable', sans-serif; font-size: clamp(2.5rem, 7vw, 5rem); }
 	.page-header span { font-size: 1.1rem; }
-	.project-section { display: grid; grid-template-columns: minmax(110px, 1fr) minmax(0, 950px) minmax(24px, 1fr); gap: 24px; padding: 90px 24px; }
+	.project-section { display: grid; grid-template-columns: minmax(110px, 1fr) minmax(0, 1150px) minmax(24px, 1fr); gap: 24px; padding: 90px 24px; }
 	.project-section:nth-child(even) { background: #f1f1f1; }
 	.section-number { grid-column: 1; color: #777; padding-top: 8px; }
 	.section-content { grid-column: 2; }
@@ -79,10 +82,13 @@
 	.section-details a { display: inline-block; margin-top: 8px; padding: 12px 16px; color: #fff; background: #111; text-decoration: none; }
 	.section-details a:hover, .section-details a:focus-visible { background: #58a6ff; }
 	.photo-space { display: grid; place-items: center; min-height: 260px; border: 2px dashed #999; background: #fff; color: #777; }
-	.rover .photo-space { border: 0; background: transparent; }
+	.rover .photo-space { border: 0; border-radius: 12px; background: transparent; overflow: hidden; transition: transform .2s ease; }
+	.rover .photo-space:hover { transform: scale(1.04); }
 	.rover .section-details img { width: min(280px, 100%); }
 	.photo-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding-top: 38px; }
-	.photo-gallery .photo-space { min-height: 180px; }
+	.photo-gallery .photo-space { aspect-ratio: 16 / 9; min-height: 0; border: 0; border-radius: 12px; overflow: hidden; transition: transform .2s ease; }
+	.photo-gallery .photo-space:hover { transform: scale(1.03); }
+	.photo-gallery img { display: block; width: 100%; height: 100%; object-fit: cover; }
 	@media (max-width: 700px) {
 		.page-header { padding: 110px 24px 80px; }
 		.project-section { display: block; padding: 64px 24px; }
