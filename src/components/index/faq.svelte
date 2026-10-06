@@ -20,6 +20,7 @@
 
 <div class="faq-container">
 	<div
+		class:open={isOpen}
 		class="question"
 		role="button"
 		tabindex="0"
@@ -35,29 +36,46 @@
 
 <style>
 	.faq-container {
-		margin: 20px auto;
-		padding: 20px;
-		border-radius: 10px;
-		width: 90%;
-		max-width: auto;
-		background-color: #ffffff;
-		transition: all 0.3s ease;
+		width: min(100%, 760px);
+		margin: 8px auto;
 		font-family: 'Exo 2 Variable';
-		text-align: center;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		text-align: left;
 	}
 
 	.question {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		cursor: pointer;
-		padding: 10px;
+		justify-content: space-between;
+		padding: 12px 16px;
 		background: #000000;
 		color: #ffffff;
-		border-radius: 10px;
-		font-size: 1rem;
-		text-align: center;
+		border-radius: 6px;
+		font-size: 0.95rem;
+		transition: background 180ms ease;
+	}
+
+	.question:hover,
+	.question:focus-visible {
+		background: #2a2a2a;
+	}
+
+	.question::after {
+		content: '+';
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	.question.open::after {
+		content: '-';
+	}
+
+	.question h2 {
+		margin: 0;
+		font-size: inherit;
+		font-weight: 600;
 	}
 
 	.answer {
@@ -65,20 +83,30 @@
 		opacity: 0;
 		overflow: hidden;
 		transition:
-			max-height 0.3s ease,
-			opacity 0.3s ease;
-		padding: 0 10px;
+			max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+			opacity 0.25s ease,
+			padding 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+			border-color 0.4s ease;
+		padding: 0 16px;
 		background: #ffffff;
 		color: #000000;
-		border-radius: 0 0 10px 10px;
-		margin-top: 5px;
-		text-align: center;
-		font-size: 1rem;
+		border: 1px solid transparent;
+		border-top: 0;
+		border-radius: 0 0 6px 6px;
+		margin-top: -1px;
+		text-align: left;
+		font-size: 0.95rem;
 	}
 
 	.answer.open {
 		max-height: 200px; /* Adjust based on content */
 		opacity: 1;
-		padding: 10px;
+		padding: 8px 16px;
+		border-color: #d7d7d7;
+	}
+
+	.answer p {
+		margin: 0;
+		line-height: 1.45;
 	}
 </style>

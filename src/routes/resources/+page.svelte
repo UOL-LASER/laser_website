@@ -39,7 +39,7 @@
 	<div class="content-row">
 		<h1>Order Form</h1>
 		<p style="text-align: center;">
-			Download the order form to request LASER merchandise or equipment.
+			Download the order form to request purchases through the EEE finance team.
 		</p>
 		<div class="separator"></div>
 		<button
