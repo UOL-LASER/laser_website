@@ -6,6 +6,7 @@
 	import laserTOS from '$lib/assets/pdf/TOS/LASER Terms of Service.pdf';
 	import laserComplaintsSOP from '$lib/assets/pdf/TOS/LASER Reporting and Complaint Handling Procedure.pdf';
 	import orderForm from '$lib/assets/ORDER FORM BLANK.docx';
+	import riskAssessment from '$lib/assets/DEPT_EEE_SINGLE_Risk_assessment_form.docx';
 
 	/** @type {{ title: string; source: string; downloadOnly?: boolean } | null} */
 	let openDocument = null;
@@ -47,6 +48,21 @@
 			on:click={() => (openDocument = { title: 'Order Form', source: orderForm, downloadOnly: true })}
 		>
 			<span>Download Order Form</span>
+			<span aria-hidden="true">↓</span>
+		</button>
+	</div>
+	<div class="content-row">
+		<h1>Risk Assessment</h1>
+		<p style="text-align: center;">
+			Download the risk assessment form for documenting hazards, risks, and control measures.
+		</p>
+		<div class="separator"></div>
+		<button
+			class="resource-link"
+			on:click={() =>
+				(openDocument = { title: 'Risk Assessment', source: riskAssessment, downloadOnly: true })}
+		>
+			<span>Download Risk Assessment</span>
 			<span aria-hidden="true">↓</span>
 		</button>
 	</div>
@@ -103,7 +119,7 @@
 			{#if openDocument.downloadOnly}
 				<div class="download-panel">
 					<p>This Word document cannot be previewed in the browser.</p>
-					<a class="download-link" href={openDocument.source} download>Download Order Form</a>
+					<a class="download-link" href={openDocument.source} download>Download {openDocument.title}</a>
 				</div>
 			{:else}
 				<iframe title={openDocument.title} src={openDocument.source}></iframe>
