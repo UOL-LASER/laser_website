@@ -53,6 +53,12 @@
 		color: #ffffff;
 		border-radius: 6px;
 		font-size: 0.95rem;
+		transition: background 180ms ease;
+	}
+
+	.question:hover,
+	.question:focus-visible {
+		background: #2a2a2a;
 	}
 
 	.question::after {
