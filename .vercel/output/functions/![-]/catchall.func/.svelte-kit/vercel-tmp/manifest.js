@@ -7,10 +7,10 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set(["assets/newsletter/week10/week10.pdf","assets/newsletter/week10/week10.png","assets/newsletter/week11/week11.pdf","assets/newsletter/week11/week11.png","assets/newsletter/week12/week12.pdf","assets/newsletter/week12/week12.png","assets/newsletter/week13/week13.pdf","assets/newsletter/week13/week13.png","assets/newsletter/week14/week14.pdf","assets/newsletter/week14/week14.png","assets/newsletter/week15/week15.pdf","assets/newsletter/week15/week15.png","assets/newsletter/week16/week16.pdf","assets/newsletter/week16/week16.png","assets/newsletter/week17/week17.pdf","assets/newsletter/week17/week17.png","assets/newsletter/week18/week18.pdf","assets/newsletter/week18/week18.png","assets/newsletter/week19/week19.pdf","assets/newsletter/week19/week19.png","assets/newsletter/week20/week20.pdf","assets/newsletter/week20/week20.png","favicon.png"]),
+	assets: new Set(["assets/newsletter/2024_25/2024_25_week10/2024_25_week10.pdf","assets/newsletter/2024_25/2024_25_week10/2024_25_week10.png","assets/newsletter/2024_25/2024_25_week11/2024_25_week11.pdf","assets/newsletter/2024_25/2024_25_week11/2024_25_week11.png","assets/newsletter/2024_25/2024_25_week12/2024_25_week12.pdf","assets/newsletter/2024_25/2024_25_week12/2024_25_week12.png","assets/newsletter/2024_25/2024_25_week13/2024_25_week13.pdf","assets/newsletter/2024_25/2024_25_week13/2024_25_week13.png","assets/newsletter/2024_25/2024_25_week14/2024_25_week14.pdf","assets/newsletter/2024_25/2024_25_week14/2024_25_week14.png","assets/newsletter/2024_25/2024_25_week15/2024_25_week15.pdf","assets/newsletter/2024_25/2024_25_week15/2024_25_week15.png","assets/newsletter/2024_25/2024_25_week16/2024_25_week16.pdf","assets/newsletter/2024_25/2024_25_week16/2024_25_week16.png","assets/newsletter/2024_25/2024_25_week17/2024_25_week17.pdf","assets/newsletter/2024_25/2024_25_week17/2024_25_week17.png","assets/newsletter/2024_25/2024_25_week18/2024_25_week18.pdf","assets/newsletter/2024_25/2024_25_week18/2024_25_week18.png","assets/newsletter/2024_25/2024_25_week19/2024_25_week19.pdf","assets/newsletter/2024_25/2024_25_week19/2024_25_week19.png","assets/newsletter/2024_25/2024_25_week20/2024_25_week20.pdf","assets/newsletter/2024_25/2024_25_week20/2024_25_week20.png","assets/newsletter/2026_27/2026_27_week1/2026_27_week1.pdf","assets/newsletter/2026_27/2026_27_week1/2026_27_week1.png","favicon.png"]),
 	mimeTypes: {".pdf":"application/pdf",".png":"image/png"},
 	_: {
-		client: {start:"_app/immutable/entry/start.CKcRK_aK.js",app:"_app/immutable/entry/app.DWRtAd6j.js",imports:["_app/immutable/entry/start.CKcRK_aK.js","_app/immutable/chunks/BWv6m4Z6.js","_app/immutable/chunks/7BSjD24L.js","_app/immutable/entry/app.DWRtAd6j.js","_app/immutable/chunks/7BSjD24L.js","_app/immutable/chunks/D_1BMN3e.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
+		client: {start:"_app/immutable/entry/start.YsOo-GFm.js",app:"_app/immutable/entry/app.BCtI5GaE.js",imports:["_app/immutable/entry/start.YsOo-GFm.js","_app/immutable/chunks/DTtwrjPa.js","_app/immutable/chunks/D2DBIn_K.js","_app/immutable/entry/app.BCtI5GaE.js","_app/immutable/chunks/D2DBIn_K.js","_app/immutable/chunks/sYShDNXW.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
 		nodes: [
 			__memo(() => import('../output/server/nodes/0.js')),
 			__memo(() => import('../output/server/nodes/1.js'))
@@ -21,7 +21,7 @@ return {
 		routes: [
 			
 		],
-		prerendered_routes: new Set(["/","/about","/competitions","/contact","/news","/projects","/projects/cubesat","/projects/rocketry","/projects/rover","/resources"]),
+		prerendered_routes: new Set(["/","/about","/competitions","/contact","/news","/projects","/resources"]),
 		matchers: async () => {
 			
 			return {  };

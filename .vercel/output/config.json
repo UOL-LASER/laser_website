@@ -70,39 +70,6 @@
 			}
 		},
 		{
-			"src": "/projects/cubesat",
-			"dest": "/projects/cubesat/"
-		},
-		{
-			"src": "/projects/cubesat/",
-			"status": 308,
-			"headers": {
-				"Location": "/projects/cubesat"
-			}
-		},
-		{
-			"src": "/projects/rocketry",
-			"dest": "/projects/rocketry/"
-		},
-		{
-			"src": "/projects/rocketry/",
-			"status": 308,
-			"headers": {
-				"Location": "/projects/rocketry"
-			}
-		},
-		{
-			"src": "/projects/rover",
-			"dest": "/projects/rover/"
-		},
-		{
-			"src": "/projects/rover/",
-			"status": 308,
-			"headers": {
-				"Location": "/projects/rover"
-			}
-		},
-		{
 			"src": "/resources",
 			"dest": "/resources/"
 		},
@@ -153,15 +120,6 @@
 		},
 		"projects.html": {
 			"path": "projects"
-		},
-		"projects/cubesat.html": {
-			"path": "projects/cubesat"
-		},
-		"projects/rocketry.html": {
-			"path": "projects/rocketry"
-		},
-		"projects/rover.html": {
-			"path": "projects/rover"
 		},
 		"resources.html": {
 			"path": "resources"
