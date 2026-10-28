@@ -26,7 +26,7 @@
 	];
 
 	const newsletterWeeks2024_25 = [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10];
-	const newsletterWeeks2026_27 = [4];
+	const newsletterWeeks2026_27 = [5, 4];
 
 	function createNewsletters(academicYear: string, weeks: number[]) {
 		return weeks.map((week) => ({
